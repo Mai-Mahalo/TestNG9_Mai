@@ -1,7 +1,6 @@
 package com.neotech.lesson02;
 
-// Lesson 02
-// Need to watch it!!!
+// Part 1-1, watched
 
 import org.openqa.selenium.By;
 import org.testng.annotations.AfterMethod;
@@ -11,7 +10,7 @@ import org.testng.annotations.Test;
 import com.neotech.utils.CommonMethods;
 import com.neotech.utils.ConfigsReader;
 
-public class Homework1 extends CommonMethods {
+public class Homework1 extends CommonMethods { // Using CommonMethods test because CommonMethods extends BaseClass 
 //    1. Open chrome browser
 //    2. Go to "https://hrm.neotechacademy.com/"
 //    3. Enter valid username
@@ -28,7 +27,7 @@ public class Homework1 extends CommonMethods {
 		// We are writing our Selenium Test
 
 		sendText(driver.findElement(By.id("txtUsername")), ConfigsReader.getProperty("username"));
-		sendText(driver.findElement(By.id("txtPassword")), "");
+		sendText(driver.findElement(By.id("txtPassword")), ""); // = leave the password field empty
 		click(driver.findElement(By.xpath("//button[@type='submit']")));
 		wait(2);
 
@@ -59,5 +58,7 @@ public class Homework1 extends CommonMethods {
 	public void quitBrowser() {
 		tearDown();
 	}
+	
+
 
 }

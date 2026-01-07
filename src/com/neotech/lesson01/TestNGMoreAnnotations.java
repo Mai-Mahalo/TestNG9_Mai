@@ -83,6 +83,7 @@ public class TestNGMoreAnnotations {
 	 *  AfterTest
 	 */
 	
+	// BeforeMethod will be executed before each @Test.
 	
 	}
 	
